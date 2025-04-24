@@ -1,12 +1,13 @@
 package com.abbosidev
 
 import jakarta.enterprise.context.ApplicationScoped
+import jakarta.inject.Inject
 
 @ApplicationScoped
-class UserService(
-    private val userDao: UserDao,
+class UserService @Inject constructor(
+    private val config: Config,
 ) {
-    fun getUsers() = userDao.findAll().all()
+    fun getUsers() = config.userDao().findAll().all()
 
-    fun addUser(user: User) = userDao.addNewUser(user)
+    fun addUser(user: User) = config.userDao().addNewUser(user)
 }
