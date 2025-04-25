@@ -17,5 +17,10 @@ class UserResource(
     fun getAll() = userService.getUsers()
 
     @POST
-    fun add(user: User) = userService.addUser(user)
+    fun add(inputUser: InputUser) = userService.addUser(inputUser)
 }
+
+data class InputUser(
+    val firstname: String,
+    val lastname: String,
+)
