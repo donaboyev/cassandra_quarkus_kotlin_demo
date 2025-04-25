@@ -20,7 +20,12 @@ class UserService @Inject constructor(
                     inputUser.lastname,
                     Role.USER,
                     now(),
-                    inputUser.salaries
+                    inputUser.salaries,
+                    Group(
+                        inputUser.groupName,
+                        inputUser.groupDescription,
+                        inputUser.groupLevel,
+                    ),
                 )
             )
 }

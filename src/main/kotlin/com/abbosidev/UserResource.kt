@@ -24,4 +24,7 @@ data class InputUser(
     val firstname: String,
     val lastname: String,
     val salaries: List<Int>,
+    val groupName: String,
+    val groupDescription: String,
+    val groupLevel: Int,
 )
