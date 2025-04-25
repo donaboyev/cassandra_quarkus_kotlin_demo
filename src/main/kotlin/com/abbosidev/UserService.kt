@@ -20,6 +20,7 @@ class UserService @Inject constructor(
                     inputUser.lastname,
                     Role.USER,
                     now(),
+                    inputUser.salaries
                 )
             )
 }

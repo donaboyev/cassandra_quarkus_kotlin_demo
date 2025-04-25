@@ -19,6 +19,7 @@ data class User(
     val role: Role,
     @CqlName("created_at")
     val createdAt: Instant?,
+    val salaries: List<Int>?,
 )
 
 enum class Role {

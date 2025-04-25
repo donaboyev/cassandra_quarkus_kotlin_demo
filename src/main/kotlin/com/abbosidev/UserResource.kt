@@ -23,4 +23,5 @@ class UserResource(
 data class InputUser(
     val firstname: String,
     val lastname: String,
+    val salaries: List<Int>,
 )
